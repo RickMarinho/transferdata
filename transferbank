@@ -1,0 +1,466 @@
+{
+  "name": "transferir",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "beGOB",
+  "actions": [
+    {
+      "info": "1",
+      "find": "clclusiobank",
+      "storage": "1",
+      "varName": "clclusiobank",
+      "name": "Find Custom Emoji"
+    },
+    {
+      "info": "1",
+      "find": "clcarteira",
+      "storage": "1",
+      "varName": "clcarteira",
+      "name": "Find Custom Emoji"
+    },
+    {
+      "info": "1",
+      "find": "clbanco",
+      "storage": "1",
+      "varName": "clbanco",
+      "name": "Find Custom Emoji"
+    },
+    {
+      "info": "1",
+      "find": "cltotal",
+      "storage": "1",
+      "varName": "cltotal",
+      "name": "Find Custom Emoji"
+    },
+    {
+      "info": "1",
+      "find": "cltransferencia",
+      "storage": "1",
+      "varName": "cltransferencia",
+      "name": "Find Custom Emoji"
+    },
+    {
+      "info": "1",
+      "find": "clcurrency",
+      "storage": "1",
+      "varName": "clcurrency",
+      "name": "Find Custom Emoji"
+    },
+    {
+      "info": "1",
+      "find": "clcomprovante",
+      "storage": "1",
+      "varName": "clcomprovante",
+      "name": "Find Custom Emoji"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "7",
+      "storage": "1",
+      "varName2": "autortag",
+      "name": "Store Member Things"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "0",
+      "storage": "1",
+      "varName2": "autorobject",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "prmvalor",
+      "name": "Store Command Params"
+    },
+    {
+      "into": "0",
+      "vAria": "${tempVars(\"prmvalor\")}",
+      "storage": "1",
+      "varName2": "number",
+      "name": "Convert Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "number",
+      "comparison": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "43",
+      "name": "Check Variable Type"
+    },
+    {
+      "info": "2",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "mencionado",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "51",
+      "name": "Check Parameters"
+    },
+    {
+      "storage": "1",
+      "varName": "mencionado",
+      "comparison": "1",
+      "value": "tempVars(\"autorobject\")",
+      "iftrue": "2",
+      "iftrueVal": "55",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "comment": "TRANSFERENCIA",
+      "color": "#ffff00",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "bank",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "bancoa",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "bank",
+      "comparison": "3",
+      "value": "tempVars(\"prmvalor\")",
+      "iftrue": "2",
+      "iftrueVal": "47",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "bank",
+      "comparison": "4",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "47",
+      "name": "Check Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"bancoa\")}",
+      "info": "1",
+      "SecondNumber": "${tempVars(\"number\")}",
+      "storage": "1",
+      "varName": "subtracao",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "bank",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "bancoa",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "bank",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "bancom",
+      "name": "Store Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"bancom\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"number\")}",
+      "storage": "1",
+      "varName": "adicao",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "bank",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "bancom",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "bank",
+      "changeType": "0",
+      "value": "tempVars(\"subtracao\")",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "bank",
+      "changeType": "0",
+      "value": "tempVars(\"adicao\")",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "wallet",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "carteira",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "bank",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "bancoa",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "total",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "saldo",
+      "name": "Store Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"carteira\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"bancoa\")}",
+      "storage": "1",
+      "varName": "valortotal",
+      "name": "Basic Math Operation"
+    },
+    {
+      "comment": "SUCESSO",
+      "color": "#00ff00",
+      "name": "Comment"
+    },
+    {
+      "title": "💳 Conta Bancária - Movimentação",
+      "author": "",
+      "color": "#0099ff",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed1",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "message": "**${tempVars(\"cltransferencia\")} Transferência de bancária de ${tempVars(\"clcurrency\")}${tempVars(\"prmvalor\")} efetuada com sucesso!**\n",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "fieldName": "${tempVars(\"clcomprovante\")} Comprovante de transferência",
+      "message": "**De: ${member}\nValor: ${tempVars(\"clcurrency\")}${tempVars(\"prmvalor\")}\nPara: ${mentionedUser}**",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "fieldName": "${tempVars(\"clclusiobank\")} Banco Clusionade",
+      "message": "**Novo Saldo**",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "fieldName": "${tempVars(\"clcarteira\")} Carteira",
+      "message": "${tempVars(\"clcurrency\")}** ${tempVars(\"carteira\")}**",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "fieldName": "${tempVars(\"clbanco\")} Banco",
+      "message": "${tempVars(\"clcurrency\")}** ${tempVars(\"bancoa\")}**",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "fieldName": "${tempVars(\"cltotal\")} Total",
+      "message": "${tempVars(\"clcurrency\")}** ${tempVars(\"valortotal\")}**\n",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "message": "Conta bancária de - ${tempVars(\"autortag\")}",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "ERROS",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "#ff0000",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://cdn.discordapp.com/attachments/538971843307110400/538972379205074985/Error.png",
+      "storage": "1",
+      "varName": "erro1",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "erro1",
+      "message": "💢 ${member}, **você não informou o valor da transferência!**\n**Uso:** `cl!transferir valor @Usuario`",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "erro1",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "#ff0000",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://cdn.discordapp.com/attachments/538971843307110400/538972379205074985/Error.png",
+      "storage": "1",
+      "varName": "erro2",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "erro2",
+      "message": "💢 ${member}, **você não possui este valor na sua conta bancária!**\n**Uso:** `cl!transferir valor @Usuario`",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "erro2",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "#ff0000",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://cdn.discordapp.com/attachments/538971843307110400/538972379205074985/Error.png",
+      "storage": "1",
+      "varName": "erro3",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "erro3",
+      "message": "💢 ${member}, **você não informou para quem irá transferir o valor**\n**Uso:** `cl!transferir valor @Usuario`",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "erro3",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "#ff0000",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://cdn.discordapp.com/attachments/538971843307110400/538972379205074985/Error.png",
+      "storage": "1",
+      "varName": "erro4",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "erro4",
+      "message": "💢 ${member}, **você não pode fazer transferência para si mesmo**\n**Uso:** `cl!transferir valor @Usuario`",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "erro4",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
